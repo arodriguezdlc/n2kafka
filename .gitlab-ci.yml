@@ -29,6 +29,8 @@ compile:
 
 test:
   stage: test
+  except:
+    - continuous-integration
   script:
     - CFLAGS=-w make -s coverage
   tags:
