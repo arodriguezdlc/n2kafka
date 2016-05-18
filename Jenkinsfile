@@ -11,6 +11,8 @@ node ('docker') {
         git branch: 'continuous-integration', credentialsId: 'jenkins_id', url: 'git@gitlab.redborder.lan:dfernandez.ext/n2kafka.git'
         sh './configure --disable-optimization'
         sh 'make'
+        stage 'running tests'
+        sh 'CFLAGS=-w make -s coverage'
 	//sh 'make tests'
 	stage 'Copy binaries'
 	stash includes: 'n2kafka', name: 'n2kafka'
