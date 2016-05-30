@@ -9,6 +9,8 @@ services:
 
 compile-gcc-4.8:
   stage: build
+  except:
+    - continuous-integration
   script:
     - scl enable devtoolset-2 bash
     - source /opt/rh/devtoolset-2/enable
@@ -19,6 +21,8 @@ compile-gcc-4.8:
 
 compile:
   stage: build
+  except: 
+    - continuous-integration
   script:
     - ./configure  --disable-optimization
     - make
