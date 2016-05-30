@@ -1,5 +1,5 @@
 
-//gitlabCommitStatus {
+gitlabCommitStatus {
     node ('docker') {
         stage 'Build'
         docker.image('resources.redborder.lan:5000/rb-cbuilds-n2kafka:1.1').inside {
@@ -11,4 +11,4 @@
         }
     }
     
-//}
+}
