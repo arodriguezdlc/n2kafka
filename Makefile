@@ -29,4 +29,7 @@ clean: bin-clean
 tests:
 	cd tests; make
 
+rpm: clean
+	$(MAKE) -C packaging/rpm
+
 -include $(DEPS)
