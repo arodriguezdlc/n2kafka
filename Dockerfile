@@ -10,13 +10,9 @@ RUN apt-get install -y supervisor && \
     apt-get clean
 
 RUN pip install j2cli
-
 ADD supervisor/n2kafka.conf /etc/supervisor/conf.d/
-
 ADD templates/config.template /app/
-
 ADD bootstrap.sh /app/
-
 WORKDIR /app
 
 CMD ["/app/bootstrap.sh"]
