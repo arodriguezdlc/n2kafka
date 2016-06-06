@@ -1,6 +1,6 @@
 PACKAGE_NAME?=	n2kafka
 
-VERSION?=	$(shell git describe --abbrev=0 --tags)
+VERSION?=	$(shell git describe --tags --long | sed 's/-/_/g')
 
 BUILD_NUMBER?= 1
 
