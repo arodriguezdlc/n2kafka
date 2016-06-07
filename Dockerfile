@@ -4,10 +4,9 @@ MAINTAINER Diego Fernández
 ADD . /app/
 RUN source /opt/rh/devtoolset-2/enable; cd /app; /app/configure; make;
 
-RUN apt-get install -y supervisor && \
-    apt-get install -y python-pip && \
-    rm -rf /var/lib/apt/lists/* && \
-    apt-get clean
+RUN yum install -y supervisor && \
+    yum install -y python-pip && \
+    yum clean all
 
 RUN pip install j2cli
 ADD supervisor/n2kafka.conf /etc/supervisor/conf.d/
