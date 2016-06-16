@@ -1,4 +1,4 @@
-FROM resources.redborder.lan:5000/rb-cbuilds-n2kafka:1.1
+FROM redborder/builds-n2kafka:latest
 MAINTAINER Diego Fernández
 
 ADD . /app/
