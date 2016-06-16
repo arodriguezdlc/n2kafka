@@ -2,7 +2,7 @@ FROM redborder/builds-n2kafka:latest
 MAINTAINER Diego Fernández
 
 ADD . /app/
-RUN source /opt/rh/devtoolset-2/enable; cd /app; /app/configure; make;
+RUN cd /app; /app/configure; make;
 
 RUN yum install -y supervisor && \
     yum install -y python-pip && \
