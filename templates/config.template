@@ -11,16 +11,13 @@
     "rdkafka.socket.max.fails": "3",
     "rdkafka.socket.keepalive.enable": "true",
     "rb_http2k_config": {
-        "uuids": {
+        "sensors_uuids": {
             "abc": {
                 "enrichment": {
                     "a": 1,
                     "b": "c",
                     "d": true,
                     "e": null
-                },
-                "limits": {
-                    "bytes": 100
                 }
             },
             "def": {
@@ -37,4 +34,3 @@
         }
     }
 }
-
